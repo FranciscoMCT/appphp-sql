@@ -1,5 +1,3 @@
-php
-Copiar código
 <?php
 $serverName = "tcp:sqlserver63ujiagifce6s.database.windows.net,1433"; // Seu servidor
 $database = "sampledb"; // Seu banco de dados
