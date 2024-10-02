@@ -1,8 +1,8 @@
 <?php
-$serverName = "tcp:tiofranserverdb.database.windows.net,1433"; // Substitua pelo seu servidor
-$database = "loja"; // Substitua pelo seu banco de dados
-$username = "tiofranserverdb-admin"; // Substitua pelo seu usuário
-$password = "sk6y5RJ5rm$R$bhI"; // Substitua pela sua senha
+$serverName = "tcp:sqlserver63ujiagifce6s.database.windows.net,1433"; // Substitua pelo seu servidor
+$database = "sampledb"; // Substitua pelo seu banco de dados
+$username = "sql"; // Substitua pelo seu usuário
+$password = "P@$$W)RD1234"; // Substitua pela sua senha
 
 try {
     // Cria a conexão com o banco de dados usando PDO
@@ -13,4 +13,5 @@ try {
     die();
 }
 ?>
+
 
