@@ -1,18 +1,17 @@
+php
+Copiar código
 <?php
-// PHP Data Objects(PDO) Sample Code:
+$serverName = "tcp:sqlserver63ujiagifce6s.database.windows.net,1433"; // Seu servidor
+$database = "sampledb"; // Seu banco de dados
+$username = "sql"; // Seu usuário SQL
+$password = "P@$$W)RD1234"; // Sua senha
+
 try {
-    $conn = new PDO("sqlsrv:server = tcp:sqlserver63ujiagifce6s.database.windows.net,1433; Database = sampledb", "sql", "P@$$W)RD1234");
+    // Cria a conexão com o banco de dados usando PDO com o ODBC Driver 17
+    $conn = new PDO("sqlsrv:server=$serverName;Database=$database", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "Erro na conexão: " . $e->getMessage();
+    die();
 }
-catch (PDOException $e) {
-    print("Error connecting to SQL Server.");
-    die(print_r($e));
-}
-
-// SQL Server Extension Sample Code:
-$connectionInfo = array("UID" => "sql", "pwd" => "P@$$W)RD1234", "Database" => "sampledb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-$serverName = "tcp:sqlserver63ujiagifce6s.database.windows.net,1433";
-$conn = sqlsrv_connect($serverName, $connectionInfo);
 ?>
-
-
