@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome']) && isset($_PO
     <title>Loja</title>
 </head>
 <body>
-    <h1>Bem-vindo à Loja</h1>
+    <h1>Bem-vindo à Loja de Produtos que não existem!</h1>
 
     <!-- Formulário para adicionar produto -->
     <form method="post">
